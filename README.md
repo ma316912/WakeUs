@@ -1,2 +1,2 @@
-# kNews
+# WakeUS
 Mobile App for news

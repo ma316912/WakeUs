@@ -1,0 +1,21 @@
+<ion-modal-view>
+  <ion-header-bar>
+    <h1 class="title">News Detail</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeNewsItemDetail()">Close</button>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+<div class="list card">
+  <div class="item">
+    <h2>{{currentItem.title}}</h2>
+  </div>
+  <div class="item item-body">
+    <p>{{currentItem.abstract}}</p>
+  </div>
+  <div class="item"><em>
+    <button type="button" class="button button-small button-assertive" ng-repeat="person in currentItem.per_facet">{{person}}</button></em>
+  </div>
+</div>
+  </ion-content>
+</ion-modal-view>

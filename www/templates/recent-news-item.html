@@ -1,0 +1,11 @@
+<ion-view view-title="Political">
+<ion-content>
+<div ng-repeat="item in newsItems" class="list card" ng-click="openNewsItemDetail(item)">
+  <div class="item item-note-left item-icon-right">
+	<a href="{{item.short_url}}" target="_blank"><i class="icon ion-link"></i></a>
+    <h2><b>{{item.item_type}}</b> : {{item.title}}</h2>
+    <div><b>People</b> : <span ng-if="!item.per_facet || item.per_facet.length==0">NA</span><span ng-if="item.per_facet && item.per_facet.length!=0" ng-repeat="person in item.per_facet"><i>{{person}}</i></span></div>
+  </div>
+</div>
+ </ion-content>
+</ion-view>
